@@ -31,7 +31,7 @@ def usuario_view(request):
          
     else:
         form = UsuarioForm()
-        return render(request, 'Jogos/usuario_Forms.html', {'form': form})
+    return render(request, 'Jogos/usuario_Forms.html', {'form': form})
     
     
 def usuario_success(request):
