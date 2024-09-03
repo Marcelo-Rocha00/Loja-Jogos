@@ -28,16 +28,13 @@ def usuario_view(request):
         if form.is_valid():
             form.save()
             return redirect('usuario_success')
-        
-        else:
-            return render(request, 'Jogo/usuario_form.html', {'form': form})
-        
+         
     else:
         form = UsuarioForm()
-        return render(request, 'Jogo/usuario_form.html', {'form': form})
+        return render(request, 'Jogos/usuario_Forms.html', {'form': form})
     
     
 def usuario_success(request):
-    return render(request, 'Jogo/usuario_success.html')
+    return render(request, 'Jogos/usuario_success.html')
     
 

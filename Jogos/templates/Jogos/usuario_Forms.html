@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criação de Usuarios</title>
+</head>
+<body>
+     <h1>Criação de Usuarios</h1>
+     <form method="post">
+        {% csrf_token %}
+        <div>
+            <label for="{{form.nome.id_for_label }}">Nome:</label>
+            <input type="text" id="{{form.nome.id_for_label }}" name="{{form.nome.html_name}}"
+            value ="{{form.nome.value}}" required>
+        </div>
+        <div>
+            <label for="{{form.email.id_for_label}}">Email:</label>
+            <input type="email" id="{{form.email.id_for_label}}"name="{{ form.email.html_name}}" value="{{ form.email.value}}" required>
+        </div>
+        <div>
+            <label for="{{ form.telefone.id_for_label}}">Telefone:</label>
+            <input type="text" id="{{ form.telefone.id_for_label }}" name="{{ form.telefone.value }}" required>
+        </div>
+        <div>
+            <label for="tipo_user">Selecione o tipo de usuário</label>
+            <select id="tipo_user" name="tipo_user">
+                <option value="DEV" {% if form.tipo_user.value == 'DEV' %}selected{% endif %}>Desenvolvedor</option>
+                <option value="DIST" {% if form.tipo_user.value == 'DIST' %}selected{% endif %}>Distribuidora</option>
+                <option value="CLI" {% if form.tipo_user.value == 'CLI' %}selected{% endif %}>Cliente</option>
+            </select>
+        </div>
+        
+
+
+        <button type="submit">Enviar</button>
+        
+    </form>
+</body>
+</html>
+
