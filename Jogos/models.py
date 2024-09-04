@@ -10,7 +10,6 @@ class Usuario(models.Model):
     telefone = models.CharField(max_length=20)
     tipo_user = models.CharField(max_length=30, choices=Usuario_Choices, default='ClI') #adicionando uma choices para o cliente escolher que tipo de usuario ele sera no site
     
-    
     def __str__(self):
         return self.nome
 

@@ -28,10 +28,11 @@ def usuario_view(request):
         if form.is_valid():
             form.save()
             return redirect('usuario_success')
-         
     else:
-        form = UsuarioForm()
+        form = UsuarioForm()  # Inicializa o formulário vazio para GET requests
+    
     return render(request, 'Jogos/usuario_Forms.html', {'form': form})
+
     
     
 def usuario_success(request):
