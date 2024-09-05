@@ -33,8 +33,7 @@ def usuario_view(request):
     
     return render(request, 'Jogos/usuario_Forms.html', {'form': form})
 
-    
-    
+  
 def usuario_success(request):
     return render(request, 'Jogos/usuario_success.html')
     
