@@ -6,17 +6,17 @@ class UsuarioForm(forms.ModelForm):
         model = Usuario
         fields = '__all__'
 
-class Desenvolvedor(forms.ModelForm):
+class DesenvolvedorForm(forms.ModelForm):
     class Meta:
         model = Desenvolvedor
         fields = '__all__'
         
-class Distribuidora(forms.ModelForm):
+class DistribuidoraForm(forms.ModelForm):
     class Meta:
         model = Distribuidora
         fields = '__all__'
         
-class Jogo(forms.ModelForm):
+class JogoForm(forms.ModelForm):
     class Meta:
         model = Jogo
         fields = '__all__'
