@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .forms import UsuarioForm
+from .forms import UsuarioForm, Desenvolvedor, Distribuidora, Jogo
 from rest_framework import viewsets
 from .models import Jogo, Desenvolvedor , Distribuidora , Usuario
 from .serializers import JogoSerializer, DesenvolvedorSerializer , DistribuidoraSerializer, UsuarioSerializer
@@ -33,6 +33,17 @@ def usuario_view(request):
     
     return render(request, 'Jogos/usuario_Forms.html', {'form': form})
 
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
 def usuario_success(request):
     return render(request, 'Jogos/usuario_success.html')
