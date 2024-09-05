@@ -16,6 +16,7 @@ router.register(r'Usuario',UsuarioViewSet )
 
 urlpatterns = [
     path('', include(router.urls)),
+    path('escolha/', views.escolha_usuario, name='escolha'),
     path('usuario/', views.usuario_view, name='usuario'),  # Rota para o formulário
     path('usuario/success/', views.usuario_success, name='usuario_success'),  # Rota para página de sucesso
 ]

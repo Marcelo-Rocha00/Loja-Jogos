@@ -37,4 +37,6 @@ def usuario_view(request):
 def usuario_success(request):
     return render(request, 'Jogos/usuario_success.html')
     
-
+    #criação de uma pagina html com 3 botão para redirecionar o usuario para sua pagina de cadastro
+def escolha_usuario(request):
+    return render(request, 'Jogos/escolha_usuario.html')
