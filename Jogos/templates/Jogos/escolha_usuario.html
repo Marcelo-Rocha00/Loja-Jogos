@@ -3,13 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>escolha usuario</title>
 </head>
 <body>
     <h1>escolha seu tipo de usuario</h1>
 
     <a href="{% url 'usuario' %}">
         <button type="button">Usuario</button>
+    </a>
+
+    <a href="{% url 'desenvolvedor' %}">
+        <button type="button">Desenvolvedor</button>
+    </a>
+
+    <a href="{% url 'Distribuidora' %}">
+        <button type="button">Distribuidora</button>
     </a>
 
 </body>

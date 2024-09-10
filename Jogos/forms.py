@@ -1,5 +1,5 @@
 from django import forms
-from .models import Usuario, Desenvolvedor,Jogo,Distribuidora
+from .models import Usuario, Desenvolvedor,Distribuidora
 
 class UsuarioForm(forms.ModelForm):
     class Meta:
@@ -16,7 +16,3 @@ class DistribuidoraForm(forms.ModelForm):
         model = Distribuidora
         fields = '__all__'
         
-class JogoForm(forms.ModelForm):
-    class Meta:
-        model = Jogo
-        fields = '__all__'

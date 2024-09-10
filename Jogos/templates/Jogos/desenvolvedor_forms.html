@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Desenvolvedor</title>
+</head>
+<body>
+    <h1>Cadastro para desenvolvedor</h1>
+    <form method="post">
+        {% csrf_token %}
+
+        <div>
+            <label for="{{ form.nome.id_for_label }}">Nome:</label>
+            {{ form.nome }}
+            {{ form.nome.errors }}
+        </div>
+
+        <div>
+            <label for="{{ form.jogos_lançados.id_for_label }}">jogos lançados:</label>
+            {{ form.jogos_lançados }}
+            {{ form.jogos_lançados.errors }}
+        </div>
+
+        <div>
+            
+            <label for="{{ form.sobre.id_for_label }}">sobre:</label>
+            {{ form.sobre }}
+            {{ form.sobre.errors }}
+        </div>
+
+
+        <button type="submit">Enviar</button>
+
+
+
+    </form>
+
+
+</body>
+</html>

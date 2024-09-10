@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Para Distribuidora</title>
+</head>
+<body>
+    <h1>Cadastro Para Distribuidora
+    
+        <form method="post" action="{% url 'Distribuidora' %}">
+            {% csrf_token %}
+
+        <div>
+            <label for="{{form.nome.id_for_label}}">Nome:</label>
+            {{form.nome}}
+            {{form.nome.errors }}
+           
+        </div>
+
+        <div>
+            <label for="{{form.jogo_distribuidos.id_for_label}}">jogo_distribuidos:</label>
+            {{form.jogo_distribuidos}}
+            {{form.jogo_distribuidos.errors}}
+        </div>
+
+        <div>
+            <label for="{{form.desenvolvedores_associados.id_for_label}}">desenvolvedores_associados</label>
+            {{form.desenvolvedores_associados}}
+            {{form.desenvolvedores_associados.errors}}
+
+        </div>
+
+        <button type="submit">Enviar</button>
+
+
+
+
+
+    </form>
+
+
+</body>
+</html>
