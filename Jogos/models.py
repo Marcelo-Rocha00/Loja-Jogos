@@ -1,5 +1,5 @@
 from django.db import models
-from .choices import Usuario_Choices
+
 
 # criação dos models 
 
@@ -8,7 +8,7 @@ class Usuario(models.Model):
     nome = models.CharField(max_length=100)
     email = models.EmailField()
     telefone = models.CharField(max_length=20)
-    tipo_user = models.CharField(max_length=30, choices=Usuario_Choices, default='ClI') #adicionando uma choices para o cliente escolher que tipo de usuario ele sera no site
+   
     
     def __str__(self):
         return self.nome

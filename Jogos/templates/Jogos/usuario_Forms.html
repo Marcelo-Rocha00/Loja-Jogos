@@ -28,13 +28,11 @@
             {{ form.telefone.errors }}
         </div>
         
-        <div>
-            <label for="{{ form.tipo_user.id_for_label }}">Selecione o tipo de usuário:</label>
-            {{ form.tipo_user }}
-            {{ form.tipo_user.errors }}
-        </div>
-        
-        <button type="submit">Enviar</button>
+        <button type="submit">Enviar</button>  <br>
+
+        <a href="{% url 'escolha' %}">
+            <button type="button">Voltar a escolha de usuario</button>
+        </a>
     </form>
 </body>
 </html>
